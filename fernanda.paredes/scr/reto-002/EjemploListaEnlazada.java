@@ -10,7 +10,7 @@ public class EjemploListaEnlazada {
         lista1.insertarAlPrincipio(1);
         lista1.insertarAlPrincipio(1);
 
-        System.out.print("Entrada:            ");
+        System.out.print("Entrada Base:       ");
         lista1.imprimirLista();
 
         lista1.eliminarRepetidos();
@@ -19,19 +19,23 @@ public class EjemploListaEnlazada {
 
         System.out.println("------------------------------------");
 
-        ListaEnlazada lista2 = new ListaEnlazada();
-        lista2.insertarAlPrincipio(4);
-        lista2.insertarAlPrincipio(3);
-        lista2.insertarAlPrincipio(3);
-        lista2.insertarAlPrincipio(2);
-        lista2.insertarAlPrincipio(1);
-        lista2.insertarAlPrincipio(1);
+        ListaEnlazada l1 = new ListaEnlazada();
+        l1.insertarAlPrincipio(4);
+        l1.insertarAlPrincipio(2);
+        l1.insertarAlPrincipio(1);
 
-        System.out.print("Entrada:            ");
-        lista2.imprimirLista();
+        ListaEnlazada l2 = new ListaEnlazada();
+        l2.insertarAlPrincipio(4);
+        l2.insertarAlPrincipio(3);
+        l2.insertarAlPrincipio(1);
 
-        lista2.eliminarRepetidosSinDummy();
-        System.out.print("Sin Dummy (Salida): ");
-        lista2.imprimirLista();
+        System.out.print("Lista 1: ");
+        l1.imprimirLista();
+        System.out.print("Lista 2: ");
+        l2.imprimirLista();
+
+        ListaEnlazada fusionada = ListaEnlazada.fusionar(l1, l2);
+        System.out.print("Fusionada (Salida): ");
+        fusionada.imprimirLista();
     }
 }

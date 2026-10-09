@@ -58,7 +58,6 @@ public class ListaEnlazada {
             }
         }
 
-
         Nodo actual = cabeza;
         while (actual != null && actual.siguiente != null) {
             if (actual.siguiente.siguiente != null && actual.siguiente.dato == actual.siguiente.siguiente.dato) {
@@ -70,5 +69,34 @@ public class ListaEnlazada {
                 actual = actual.siguiente;
             }
         }
+    }
+
+    public static ListaEnlazada fusionar(ListaEnlazada l1, ListaEnlazada l2) {
+        ListaEnlazada resultado = new ListaEnlazada();
+        Nodo dummy = new Nodo(0);
+        Nodo actual = dummy;
+
+        Nodo p1 = (l1 != null) ? l1.cabeza : null;
+        Nodo p2 = (l2 != null) ? l2.cabeza : null;
+
+        while (p1 != null && p2 != null) {
+            if (p1.dato <= p2.dato) {
+                actual.siguiente = p1;
+                p1 = p1.siguiente;
+            } else {
+                actual.siguiente = p2;
+                p2 = p2.siguiente;
+            }
+            actual = actual.siguiente;
+        }
+
+        if (p1 != null) {
+            actual.siguiente = p1;
+        } else if (p2 != null) {
+            actual.siguiente = p2;
+        }
+
+        resultado.cabeza = dummy.siguiente;
+        return resultado;
     }
 }
