@@ -49,4 +49,26 @@ public class ListaEnlazada {
 
         cabeza = nodoDummy.siguiente;
     }
+
+    public void eliminarRepetidosSinDummy() {
+        while (cabeza != null && cabeza.siguiente != null && cabeza.dato == cabeza.siguiente.dato) {
+            int valorRepetido = cabeza.dato;
+            while (cabeza != null && cabeza.dato == valorRepetido) {
+                cabeza = cabeza.siguiente;
+            }
+        }
+
+
+        Nodo actual = cabeza;
+        while (actual != null && actual.siguiente != null) {
+            if (actual.siguiente.siguiente != null && actual.siguiente.dato == actual.siguiente.siguiente.dato) {
+                int valorRepetido = actual.siguiente.dato;
+                while (actual.siguiente != null && actual.siguiente.dato == valorRepetido) {
+                    actual.siguiente = actual.siguiente.siguiente;
+                }
+            } else {
+                actual = actual.siguiente;
+            }
+        }
+    }
 }
