@@ -6,7 +6,9 @@ Los retos se irán proponiendo, habitualmente luego de una disertación teórica
 
 |Retos|Fecha de entrega|Rama de entrega
 |-|-|-|
-[Reto 001 - laFila](/evaluaciones/retos/reto001.md)|Lunes 21|entrega-001
-[Reto 002 - Nodo dummy](/evaluaciones/retos/reto002.md)|Viernes 9, 00:00h|entrega-002
+[Reto 001 - laFila](/evaluaciones/retos/reto001.md)|Lunes 21|reto-001
+[Reto 002 - Nodo dummy](/evaluaciones/retos/reto002.md)|Viernes 9, 00:00h|reto-002
+[Reto 003 - Simulación](/evaluaciones/retos/reto003.md)||reto-003
+
 
 </div>
